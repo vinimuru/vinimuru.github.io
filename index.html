@@ -1,11 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-  	<link rel="stylesheet" href="homepage.css">
-  	<title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-    <p> Example paragraph #2 </p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    body {
+      background: #eef2f7;
+      color: #1f2933;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    header {
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 8%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+    }
+
+    header h2 {
+      color: #0f172a;
+    }
+
+    nav a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #475569;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #0f172a;
+    }
+
+    /* HERO */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 70px 8%;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .hero-text {
+      max-width: 500px;
+    }
+
+    .hero-text h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+      color: #0f172a;
+    }
+
+    .hero-text p {
+      margin-bottom: 25px;
+      color: #475569;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0f172a;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #1e293b;
+    }
+
+    .hero img {
+      width: 260px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 60px 8%;
+    }
+
+    h2.section-title {
+      margin-bottom: 30px;
+      color: #0f172a;
+    }
+
+    /* PROJECTS — 2 CARDS LAYOUT */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 900px;
+    }
+
+    .card {
+      background: white;
+      padding: 26px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 22px rgba(0,0,0,0.12);
+    }
+
+    /* CONTACT */
+    .contact p {
+      margin: 8px 0;
+      color: #475569;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #0f172a;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <h2>Your Name</h2>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+
+    <div class="hero-text">
+      <h1>Hello, I’m Your Name</h1>
+      <p>
+        I’m a Computer Science student interested in UX design,
+        human-computer interaction, and building impactful tech.
+      </p>
+
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+    <!-- YOUR IMAGE -->
+    <img src="your-picture.jpg" alt="My Picture">
+
+  </div>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects">
+
+      <div class="card">
+        <h3>Project One</h3>
+        <p>
+          Describe your project, what problem it solves,
+          and what tools or languages you used.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Project Two</h3>
+        <p>
+          Describe your project, what you learned,
+          and why it’s meaningful to you.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <div class="contact">
+      <p>Email: yourname@email.com</p>
+      <p>LinkedIn: linkedin.com/in/yourname</p>
+      <p>GitHub: github.com/yourusername</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Your Name. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
